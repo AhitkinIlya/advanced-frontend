@@ -8,5 +8,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         port,
         open: true,
         historyApiFallback: true, // без этого параметра, если перезагрузить страницу например /about, то ошибка вылетит 'Cannot GET /about'
+        hot: true,
     }
 }
