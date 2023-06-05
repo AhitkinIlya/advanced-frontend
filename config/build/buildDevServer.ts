@@ -1,5 +1,5 @@
-import { BuildOptions } from './types/config'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import { BuildOptions } from './types/config'
 
 export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     const { port } = options
@@ -7,7 +7,9 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     return {
         port,
         open: true,
-        historyApiFallback: true, // без этого параметра, если перезагрузить страницу например /about, то ошибка вылетит 'Cannot GET /about'
+        historyApiFallback: true,
+        // без этого параметра, если перезагрузить страницу например
+        // /about, то ошибка вылетит 'Cannot GET /about'
         hot: true,
     }
 }
