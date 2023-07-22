@@ -10,9 +10,6 @@ const meta: Meta<typeof Sidebar> = {
         layout: 'centered',
     },
     tags: ['autodocs'],
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 }
 
 export default meta
